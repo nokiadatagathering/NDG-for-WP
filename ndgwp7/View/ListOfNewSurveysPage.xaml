@@ -1,0 +1,103 @@
+﻿<!-- 
+    Copyright (C) 2011  Comarch
+  
+    NDG for WP7 is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License as published by the Free Software Foundation; either 
+    version 2.1 of the License, or (at your option) any later version.
+  
+    NDG is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
+  
+    You should have received a copy of the GNU Lesser General Public
+    License along with NDG.  If not, see <http://www.gnu.org/licenses/
+-->
+<phone:PhoneApplicationPage 
+    x:Class="com.comarch.mobile.ndg.View.ListOfNewSurveysPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:konwertery="clr-namespace:com.comarch.mobile.ndg.ViewModel"
+    xmlns:processing="clr-namespace:com.comarch.mobile.ndg.BusyIndicator"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{Binding Values.FontSize, Source={StaticResource SettingValues}}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <phone:PhoneApplicationPage.Resources>
+        <konwertery:BoolToVisibilityConverter x:Key="VisibilityConverter"/>
+    </phone:PhoneApplicationPage.Resources>
+    <processing:BusyIndicatorControl x:Name="BusyIndicator" Style="{StaticResource BusyIndicatorStyle}"
+                                   BusyText="{Binding Path=Information, Mode=TwoWay}"
+			                       IsBusy="{Binding Path=IsEnabled, Mode=TwoWay}" DataContext="{Binding}">
+        <Grid x:Name="LayoutRoot" Background="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--TitlePanel contains the name of the application and page title-->
+            <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+                <TextBlock x:Name="ApplicationTitle" Text="{Binding LocalizedResources.applicationTitle, Source={StaticResource LanguageStrings}}" Style="{StaticResource PhoneTextNormalStyle}"/>
+                <TextBlock x:Name="PageTitle" Text="{Binding LocalizedResources.listOfNewSurveysPage_PageTitle, Source={StaticResource LanguageStrings}}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            </StackPanel>
+
+            <!--ContentPanel - place additional content here-->
+            <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+          
+                    <ListBox x:Name="ListOfNewSurveysBox" Margin="0,6,-12,0" ItemsSource="{Binding}" >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="0,0,0,17" Width="432">
+                                <TextBlock Text="{Binding Name}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{Binding Values.ListFontSize, Source={StaticResource SettingValues}}" />
+                             <!--   <CheckBox Content="{Binding Name}"  FontSize="30" IsChecked="{Binding IsChecked, Mode=TwoWay}" /> -->
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                <TextBlock x:Name="Status" Text="{Binding StatusMessage}" TextWrapping="Wrap" Visibility="{Binding Show, Converter={StaticResource VisibilityConverter}}" Style="{StaticResource PhoneTextAccentStyle}" FontSize="{Binding Values.FontSize, Source={StaticResource SettingValues}}" />
+            </Grid>
+        </Grid>
+    </processing:BusyIndicatorControl>
+    
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <!--<shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Download all" Click="OnDownloadSurveys" />
+                <shell:ApplicationBarMenuItem Text="Refresh list" Click="OnRefresh" />
+            </shell:ApplicationBar.MenuItems>-->
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

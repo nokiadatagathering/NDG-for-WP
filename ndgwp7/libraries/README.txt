@@ -1,0 +1,2 @@
+Coding4Fun.Phone.Controls and Microsoft.Phone.Controls.Toolkit ( SilverLight) are licensed under Microsoft Public License ( Ms-PL )
+Zlib library has it's own license distributed in zlib-LICENSE.txt file

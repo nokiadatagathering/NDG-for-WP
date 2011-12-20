@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9AC93309-E5D3-4C1B-B2AE-012323146DA9}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.comarch.mobile.ndg</RootNamespace>
+    <AssemblyName>ndgwp7</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>pl-PL;es-ES;</SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>ndgwp7.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>com.comarch.mobile.ndg.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>Bin\Debug\ndgwp7.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>Bin\Release\ndgwp7.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Coding4Fun.Phone.Controls, Version=1.4.5.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Maps, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>libraries\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="zlib.wp7, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\MessageDialog\ShowDownloadCancelMessageBox.cs" />
+    <Compile Include="Helpers\ValidationControl\ValidationRules.cs" />
+    <Compile Include="Helpers\ValidationControl\ValidatonControl.cs" />
+    <Compile Include="Languages\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\BusyIndicator\BusyIndicatorControl.cs" />
+    <Compile Include="Helpers\BusyIndicator\ProcessingBar.cs" />
+    <Compile Include="Helpers\MessageDialog\DialogBox.cs" />
+    <Compile Include="Helpers\MessageDialog\MessageView.cs" />
+    <Compile Include="Languages\AppResources.es-ES.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.es-ES.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Languages\AppResources.pl-PL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.pl-PL.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Languages\LanguageResources.cs" />
+    <Compile Include="Model\AESEncryption.cs" />
+    <Compile Include="Model\BingMap.cs" />
+    <Compile Include="Model\GPSEntity.cs" />
+    <Compile Include="Model\DateOperations.cs" />
+    <Compile Include="Model\DownloadListStatus.cs" />
+    <Compile Include="Model\DownloadSurveysStatus.cs" />
+    <Compile Include="Model\Download\DownloadNewSurveys.cs" />
+    <Compile Include="Model\GPSService.cs" />
+    <Compile Include="Model\OperationsOnListOfResults.cs" />
+    <Compile Include="Model\OperationsOnRegistration.cs" />
+    <Compile Include="Model\ResultBasicInfo.cs" />
+    <Compile Include="Model\ResultsFilter.cs" />
+    <Compile Include="Model\SendResult.cs" />
+    <Compile Include="Model\SettingEntity.cs" />
+    <Compile Include="Model\Registration.cs" />
+    <Compile Include="Model\SettingValues.cs" />
+    <Compile Include="Model\SurveyBasicInfo.cs" />
+    <Compile Include="Model\SurveyForms\Category.cs" />
+    <Compile Include="Model\SurveyForms\NormalCategory.cs" />
+    <Compile Include="Model\SurveyForms\ConditionCategory.cs" />
+    <Compile Include="Model\SurveyForms\ExclusiveChoiceQuestion.cs" />
+    <Compile Include="Model\SurveyForms\ImageQuestion.cs" />
+    <Compile Include="Model\SurveyForms\MultipleChoiceQuestion.cs" />
+    <Compile Include="Model\SurveyForms\DateQuestion.cs" />
+    <Compile Include="Model\SurveyForms\DescriptiveQuestion.cs" />
+    <Compile Include="Model\SurveyForms\NumericQuestion.cs" />
+    <Compile Include="Model\SurveyForms\Question.cs" />
+    <Compile Include="Model\SurveyForms\Survey.cs" />
+    <Compile Include="Model\SurveyForms\TimeQuestion.cs" />
+    <Compile Include="Model\TestConnection.cs" />
+    <Compile Include="ViewModel\BingMapViewModel.cs" />
+    <Compile Include="ViewModel\BoolToBorderThicknessConverter.cs" />
+    <Compile Include="ViewModel\BoolToVisibilityConverter.cs" />
+    <Compile Include="Model\Download\CheckForNewSurveyList.cs" />
+    <Compile Include="Model\OperationsOnSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\ChoiceItemsToListItemsConverter.cs" />
+    <Compile Include="ViewModel\GeoCoordinatesConverter.cs" />
+    <Compile Include="ViewModel\EnableEncryptionPageViewModel.cs" />
+    <Compile Include="ViewModel\EncryptionPasswordPageViewModel.cs" />
+    <Compile Include="ViewModel\ResultStatusConverter.cs" />
+    <Compile Include="ViewModel\ConditionCategoryControlViewModel.cs" />
+    <Compile Include="ViewModel\EmptyAnswerConverter.cs" />
+    <Compile Include="ViewModel\FillingSurveyViewModel.cs" />
+    <Compile Include="ViewModel\ImageOperations.cs" />
+    <Compile Include="ViewModel\ListOfNewSurveysViewModel.cs" />
+    <Compile Include="ViewModel\ListOfSurveysViewModel.cs" />
+    <Compile Include="Model\OperationsOnListOfSurveys.cs" />
+    <Compile Include="ViewModel\NormalCategoryViewModel.cs" />
+    <Compile Include="ViewModel\PreviewCategoryViewModel.cs" />
+    <Compile Include="ViewModel\PreviewSurveyViewModel.cs" />
+    <Compile Include="ViewModel\RegistrationViewModel.cs" />
+    <Compile Include="ViewModel\ResultsFilterViewModel.cs" />
+    <Compile Include="ViewModel\ResultStatusToVisibilityConverter.cs" />
+    <Compile Include="ViewModel\SelectedIndexToVisibilityConverter.cs" />
+    <Compile Include="ViewModel\ServerUrlDisplayConverter.cs" />
+    <Compile Include="ViewModel\SettingsViewModel.cs" />
+    <Compile Include="ViewModel\SurveyViewModel.cs" />
+    <Compile Include="View\BingMapPage.xaml.cs">
+      <DependentUpon>BingMapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EnableEncryptionPage.xaml.cs">
+      <DependentUpon>EnableEncryptionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EncryptionPasswordPage.xaml.cs">
+      <DependentUpon>EncryptionPasswordPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FillingConditionCategoryPage.xaml.cs">
+      <DependentUpon>FillingConditionCategoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FillingSurveyPage.xaml.cs">
+      <DependentUpon>FillingSurveyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FilterListPage.xaml.cs">
+      <DependentUpon>FilterListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ListOfNewSurveysPage.xaml.cs">
+      <DependentUpon>ListOfNewSurveysPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ListOfSurveysPage.xaml.cs">
+      <DependentUpon>ListOfSurveysPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PreviewConditionCategoryPage.xaml.cs">
+      <DependentUpon>PreviewConditionCategoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PreviewSurveyPage.xaml.cs">
+      <DependentUpon>PreviewSurveyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RegistrationPage.xaml.cs">
+      <DependentUpon>RegistrationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ResultsFilterPage.xaml.cs">
+      <DependentUpon>ResultsFilterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SurveyForms\CategoryControl.xaml.cs">
+      <DependentUpon>CategoryControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SurveyForms\CategoryPivotItem.cs" />
+    <Compile Include="View\SurveyForms\ConditionCategoryControl.xaml.cs">
+      <DependentUpon>ConditionCategoryControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SurveyForms\DateQuestionControl.xaml.cs">
+      <DependentUpon>DateQuestionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SurveyForms\DescriptiveQuestionControl.xaml.cs">
+      <DependentUpon>DescriptiveQuestionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SurveyForms\ExclusiveChoiceQuestionControl.xaml.cs">
+      <DependentUpon>ExclusiveChoiceQuestionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SurveyForms\ImageQuestionControl.xaml.cs">
+      <DependentUpon>ImageQuestionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SurveyForms\MultipleChoiceQuestionControl.xaml.cs">
+      <DependentUpon>MultipleChoiceQuestionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SurveyForms\NumericQuestionControl.xaml.cs">
+      <DependentUpon>NumericQuestionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SurveyForms\PreviewResultControl.xaml.cs">
+      <DependentUpon>PreviewResultControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SurveyForms\PreviewSubcategoryControl.xaml.cs">
+      <DependentUpon>PreviewSubcategoryControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SurveyForms\TimeQuestionControl.xaml.cs">
+      <DependentUpon>TimeQuestionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SurveyPage.xaml.cs">
+      <DependentUpon>SurveyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdatesPage.xaml.cs">
+      <DependentUpon>UpdatesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\MessageDialog\YesNoMessageBox.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Helpers\BusyIndicator\IndicatorStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Helpers\ValidationControl\ValidationStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Theme\lightTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Theme\darkTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Theme\ndgTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Theme\greenTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\BingMapPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EnableEncryptionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EncryptionPasswordPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FillingConditionCategoryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FillingSurveyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FilterListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ListOfNewSurveysPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ListOfSurveysPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PreviewConditionCategoryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PreviewSurveyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RegistrationPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ResultsFilterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SurveyForms\CategoryControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SurveyForms\ConditionCategoryControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SurveyForms\DateQuestionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SurveyForms\DescriptiveQuestionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SurveyForms\ExclusiveChoiceQuestionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SurveyForms\ImageQuestionControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SurveyForms\MultipleChoiceQuestionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SurveyForms\NumericQuestionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SurveyForms\PreviewResultControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SurveyForms\PreviewSubcategoryControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SurveyForms\TimeQuestionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SurveyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UpdatesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\WMAppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png" />
+    <Content Include="Background.png" />
+    <Content Include="SplashScreenImage.jpg" />
+    <Content Include="Theme\background.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Resource Include="View\icons\NotReadyToSendIcon.png" />
+    <Resource Include="View\icons\ReadyToSendIcon.png" />
+    <Resource Include="View\icons\SentIcon.png" />
+    <Content Include="View\icons\MapsApply.png" />
+    <Content Include="View\icons\MapShowAll.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\icons\MapsMe.png" />
+    <Content Include="View\icons\UnFavoriteIcon.png" />
+    <Resource Include="View\icons\FavoriteStamp.png" />
+    <Content Include="View\icons\AddFavoriteIcon.png" />
+    <Content Include="View\icons\RemoveFavoriteIcon.png" />
+    <Content Include="View\icons\AddIcon.png" />
+    <Content Include="View\icons\FilterResultsIcon.png" />
+    <Content Include="View\icons\SettingIcon.png" />
+    <Content Include="View\icons\FavoriteIcon.png" />
+    <Content Include="View\icons\NewResultIcon.png" />
+    <Content Include="View\icons\SaveResultIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Languages\AppResources.es-ES.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.es-ES.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Languages\AppResources.pl-PL.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.pl-PL.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Languages\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <PropertyGroup>
+    <PreBuildEvent>copy  "$(ProjectDir)/libraries/" "$(TargetDir)"</PreBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="checkForNewSurveyList_DownloadFailed" xml:space="preserve">
+    <value>Nie można pobrać listy ankiet. Sprawdź adres URL serwera.</value>
+  </data>
+  <data name="checkForNewSurveyList_Downloading" xml:space="preserve">
+    <value>Pobieranie listy ankiet...</value>
+  </data>
+  <data name="checkForNewSurveyList_ManyNewSurveys" xml:space="preserve">
+    <value>Znaleziono nowe ankiety: {0}</value>
+  </data>
+  <data name="checkForNewSurveyList_OneNewSurvey" xml:space="preserve">
+    <value>Znaleziono jedną nową ankietę.</value>
+  </data>
+  <data name="checkForNewSurveyList_ServerError" xml:space="preserve">
+    <value>Nieznany błąd.</value>
+  </data>
+  <data name="checkForNewSurveyList_ServerIncompleteResponse" xml:space="preserve">
+    <value>Nie można pobrać listy ankiet, serwer zwraca niezrozumiałą odpowiedź.</value>
+  </data>
+  <data name="checkForNewSurveyList_ServerNotFound" xml:space="preserve">
+    <value>Nie można znaleźć serwera, sprawdź połączenie z Internetem oraz adres serwera, a następnie spróbuj ponownie.</value>
+  </data>
+  <data name="checkForNewSurveyList_ZeroNewSurvey" xml:space="preserve">
+    <value>Nie znaleziono żadnej nowej ankiety.</value>
+  </data>
+  <data name="conditionCategoryControl_MessageBoxMessage" xml:space="preserve">
+    <value>Chesz dodać nowe kopie kategorii?</value>
+  </data>
+  <data name="conditionCategoryControl_MessageBoxTitle" xml:space="preserve">
+    <value>Dodaj kategorie</value>
+  </data>
+  <data name="downloadNewSurveys_CantConfirm" xml:space="preserve">
+    <value>Nie można potwierdzić pobrania ankiet.</value>
+  </data>
+  <data name="downloadNewSurveys_CantDownloading" xml:space="preserve">
+    <value>Nie mozna pobrać ankiet.</value>
+  </data>
+  <data name="downloadNewSurveys_Downloading" xml:space="preserve">
+    <value>Pobieranie nowych ankiet...</value>
+  </data>
+  <data name="downloadNewSurveys_DownloadingCompleted" xml:space="preserve">
+    <value>Pobieranie zakończone.</value>
+  </data>
+  <data name="downloadNewSurveys_MoreSurveys" xml:space="preserve">
+    <value>Jest więcej nowych ankiet. Odśwież listę i spróbuj ponownie.</value>
+  </data>
+  <data name="downloadNewSurveys_SavingProblem" xml:space="preserve">
+    <value>Wystąpił problem przy próbie zapisu nowej ankiety, prawdopodobnie nie ma wystarczająco dużo miejsca.</value>
+  </data>
+  <data name="downloadNewSurveys_WrongResponse" xml:space="preserve">
+    <value>Nie można pobrac ankiet, serwer wysyła nieprawidłową odpowiedź.</value>
+  </data>
+  <data name="fillingSurveyPage_Condition" xml:space="preserve">
+    <value>Pytanie warunkowe</value>
+  </data>
+  <data name="imageQuestionControl_BrowseImagesButton" xml:space="preserve">
+    <value>przeglądaj</value>
+  </data>
+  <data name="imageQuestionControl_MaxImageCapacity" xml:space="preserve">
+    <value>Osiągnąłeś maksymalną ilość zdjęć w tym pytaniu.</value>
+  </data>
+  <data name="imageQuestionControl_TakePhotoButton" xml:space="preserve">
+    <value>zrób zdjęcie</value>
+  </data>
+  <data name="imageQuestion_Images" xml:space="preserve">
+    <value>Zdjęcia: {0}/{1}</value>
+  </data>
+  <data name="indicatorStyle_BusyText" xml:space="preserve">
+    <value>Łączenie...</value>
+  </data>
+  <data name="listOfNewSurveysPageAppBarr_Download" xml:space="preserve">
+    <value>Pobierz wszystkie</value>
+  </data>
+  <data name="listOfNewSurveysPageAppBarr_Refresh" xml:space="preserve">
+    <value>Odśwież listę</value>
+  </data>
+  <data name="listOfNewSurveysPage_DownloadAll" xml:space="preserve">
+    <value>Pobierz wszystkie</value>
+  </data>
+  <data name="listOfNewSurveysPage_PageTitle" xml:space="preserve">
+    <value>nowe ankiety</value>
+  </data>
+  <data name="listOfNewSurveysPage_RefreshList" xml:space="preserve">
+    <value>Odśwież listę</value>
+  </data>
+  <data name="listOfSurveysPageAppBar_CheckNewSurveys" xml:space="preserve">
+    <value>Sprawdź nowe ankiety</value>
+  </data>
+  <data name="listOfSurveysPageAppBar_CheckUpdate" xml:space="preserve">
+    <value>Sprawdź ankiety</value>
+  </data>
+  <data name="listOfSurveysPageAppBar_Settings" xml:space="preserve">
+    <value>Ustawienia</value>
+  </data>
+  <data name="listOfSurveysPageAppBar_TestConnection" xml:space="preserve">
+    <value>Test połączenia</value>
+  </data>
+  <data name="listOfSurveysPage_PageTitle" xml:space="preserve">
+    <value>lista ankiet</value>
+  </data>
+  <data name="messageBox_Cancel" xml:space="preserve">
+    <value>Anuluj</value>
+  </data>
+  <data name="messageBox_No" xml:space="preserve">
+    <value>Nie</value>
+  </data>
+  <data name="messageBox_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="messageBox_Yes" xml:space="preserve">
+    <value>Tak</value>
+  </data>
+  <data name="operationsOnRegistration_CheckConnection" xml:space="preserve">
+    <value>Sprawdź połączenie z Internetem</value>
+  </data>
+  <data name="operationsOnRegistration_CheckConnectionServerAddress" xml:space="preserve">
+    <value>Sprawdź połączenie z Internetem oraz adres serwera.</value>
+  </data>
+  <data name="operationsOnRegistration_ConnectionProblem" xml:space="preserve">
+    <value>Problem z połączeniem</value>
+  </data>
+  <data name="operationsOnRegistration_ContainMaximum" xml:space="preserve">
+    <value>Może zawierać maksymalnie {0} znaków.</value>
+  </data>
+  <data name="operationsOnRegistration_ContainMinimum" xml:space="preserve">
+    <value>Musi zawierać co najmniej {0} znaków.</value>
+  </data>
+  <data name="operationsOnRegistration_PhoneNotValidIMEIExist" xml:space="preserve">
+    <value>Twój numer telefonu jest niepoprawny lub podany IMEI jest już zarejestrowany.</value>
+  </data>
+  <data name="operationsOnRegistration_RegistratedSuccessfully" xml:space="preserve">
+    <value>Twój numer IMEI został zarejestronawy prawidłowo.</value>
+  </data>
+  <data name="operationsOnRegistration_RegistrationFailed" xml:space="preserve">
+    <value>Rejestracja nie powiodła się</value>
+  </data>
+  <data name="operationsOnRegistration_RegistrationSuccess" xml:space="preserve">
+    <value>Rejestracja zakończona powodzeniem</value>
+  </data>
+  <data name="operationsOnRegistration_ServerNotResponding" xml:space="preserve">
+    <value>Serwer nie odpowiada. Sprawdź połączenie z Internetem.</value>
+  </data>
+  <data name="operationsOnRegistration_SetServerAddress" xml:space="preserve">
+    <value>Ustaw adres serwera.</value>
+  </data>
+  <data name="operationsOnRegistration_ValidServerAddress" xml:space="preserve">
+    <value>Sprawdź czy podane adres serwera jest poprawny.</value>
+  </data>
+  <data name="processingBar_Working" xml:space="preserve">
+    <value>Proszę czekać...</value>
+  </data>
+  <data name="registrationPage_PageTitle" xml:space="preserve">
+    <value>rejestracja</value>
+  </data>
+  <data name="registrationPage_RegisterButton" xml:space="preserve">
+    <value>Rejestruj</value>
+  </data>
+  <data name="registrationPage_RegistrationConfirmation" xml:space="preserve">
+    <value>Wyrażam zgodę na wysłanie mojego numeru telefonu oraz numeru IMEI</value>
+  </data>
+  <data name="registrationPage_TitleIMEI" xml:space="preserve">
+    <value>Twój IMEI:</value>
+  </data>
+  <data name="registrationPage_TitlePhoneNumber" xml:space="preserve">
+    <value>Twój numer telefonu:</value>
+  </data>
+  <data name="registrationPage_TitleServerUrl" xml:space="preserve">
+    <value>Adres serwera:</value>
+  </data>
+  <data name="settingsPage_PageTitle" xml:space="preserve">
+    <value>ustawienia</value>
+  </data>
+  <data name="settings_DateFormat" xml:space="preserve">
+    <value>Format daty</value>
+  </data>
+  <data name="settings_FontSize" xml:space="preserve">
+    <value>Rozmiar czcionki</value>
+  </data>
+  <data name="settings_GPS" xml:space="preserve">
+    <value>Konfiguracja GPS</value>
+  </data>
+  <data name="settings_IsolatedStorageFailed" xml:space="preserve">
+    <value>Nie można wczytać ustawień. Proszę uruchomić aplikację ponownie.</value>
+  </data>
+  <data name="settings_Language" xml:space="preserve">
+    <value>Język</value>
+  </data>
+  <data name="settings_Large" xml:space="preserve">
+    <value>Duży</value>
+  </data>
+  <data name="settings_Medium" xml:space="preserve">
+    <value>Średni</value>
+  </data>
+  <data name="settings_SaveFailed" xml:space="preserve">
+    <value>Nie mozna zapisać nowych ustawień.</value>
+  </data>
+  <data name="settings_SaveNothing" xml:space="preserve">
+    <value>Brak zmian do zapisu.</value>
+  </data>
+  <data name="settings_Small" xml:space="preserve">
+    <value>Mały</value>
+  </data>
+  <data name="surveyPageAppBar_Delete" xml:space="preserve">
+    <value>Usuń ankietę</value>
+  </data>
+  <data name="surveyPageAppBar_NewResult" xml:space="preserve">
+    <value>nowy wynik</value>
+  </data>
+  <data name="surveyPage_deleteSurveyDialogMessage" xml:space="preserve">
+    <value>Czy na pewno chcesz usunąć ankiete i wszystkie wyniki?</value>
+  </data>
+  <data name="surveyPage_deleteSurveyDialogTitle" xml:space="preserve">
+    <value>Usuń ankietę</value>
+  </data>
+  <data name="surveyPage_deleteSurveyError" xml:space="preserve">
+    <value>Usuwanie tej ankiety się nie powiodło.</value>
+  </data>
+  <data name="surveyPage_SurveyID" xml:space="preserve">
+    <value>ID ankiety:</value>
+  </data>
+  <data name="testConnectionPage_PageTitle" xml:space="preserve">
+    <value>test połączenia</value>
+  </data>
+  <data name="updatesPage_PageTitle" xml:space="preserve">
+    <value>updates</value>
+  </data>
+  <data name="settings_PhotoResolution" xml:space="preserve">
+    <value>Wybierz rozdzielczość zdjęcia</value>
+  </data>
+  <data name="listOfNewSurveysPage_DownloadingProgress" xml:space="preserve">
+    <value>Pobieranie w toku, proszę czekać.</value>
+  </data>
+  <data name="listOfNewSurveysPage_NothingDownload" xml:space="preserve">
+    <value>Brak nowych ankiet do ściągniecią.</value>
+  </data>
+  <data name="listOfNewSurveysPage_TooLateInterrupt" xml:space="preserve">
+    <value>Za późno aby przerwać pobieranie (?)</value>
+  </data>
+  <data name="applicationTitle" xml:space="preserve">
+    <value>Nokia Data Gathering</value>
+  </data>
+  <data name="operationsOnRegistration_ProcessingBarInformation" xml:space="preserve">
+    <value>Łączenie...</value>
+  </data>
+  <data name="imageQuestion_ImageIsNull" xml:space="preserve">
+    <value>Zdjęcie nie istnieje.</value>
+  </data>
+  <data name="fillingSurveyPage_OnSaveResultTitle" xml:space="preserve">
+    <value>zapisz wynik</value>
+  </data>
+  <data name="validationRules_LengthEmptyMessage" xml:space="preserve">
+    <value>Pole nie może być puste.</value>
+  </data>
+  <data name="validationRules_LengthMaxMessage" xml:space="preserve">
+    <value>Pole może zawierać tylko {0} znaków.</value>
+  </data>
+  <data name="validationRules_LengthMinMessage" xml:space="preserve">
+    <value>Pole musi zawierać przynajmniej {0} znaków.</value>
+  </data>
+  <data name="validationRules_RegexValueNotValid" xml:space="preserve">
+    <value>Pole zawiera niedozwolone znaki.</value>
+  </data>
+  <data name="validationRules_MaxReachedMessage" xml:space="preserve">
+    <value>Maksymalna wartość to {0}</value>
+  </data>
+  <data name="validationRules_MinReachedMessage" xml:space="preserve">
+    <value>Minimalna wartość to {0}</value>
+  </data>
+  <data name="dateQuestion_MaxDateReached" xml:space="preserve">
+    <value>Wybierz datę przed {0}</value>
+  </data>
+  <data name="dateQuestion_MinDateReached" xml:space="preserve">
+    <value>Wybierz datę po {0}</value>
+  </data>
+  <data name="surveyPage_contextMenuDeleteItem" xml:space="preserve">
+    <value>usuń wynik</value>
+  </data>
+  <data name="settings_Custom" xml:space="preserve">
+    <value>Własne</value>
+  </data>
+  <data name="settings_PhoneLanguage" xml:space="preserve">
+    <value>Język telefonu</value>
+  </data>
+  <data name="surveyPage_contextMenuEditItem" xml:space="preserve">
+    <value>edytuj wynik</value>
+  </data>
+  <data name="surveyPage_contextMenuSendItem" xml:space="preserve">
+    <value>wyślij wynik</value>
+  </data>
+  <data name="surveyPage_contextMenuShowItem" xml:space="preserve">
+    <value>pokaż wynik</value>
+  </data>
+  <data name="surveyPage_resultsListtitle" xml:space="preserve">
+    <value>Zapisane wyniki:</value>
+  </data>
+  <data name="settingsPage_InvalidCustomValue" xml:space="preserve">
+    <value>Wartość nie jest poprawna. Proszę podać liczbę z przedziału {0} - {1}</value>
+  </data>
+  <data name="fillingSurveyPage_enterResultTitleDialog" xml:space="preserve">
+    <value>Wprowadź tytuł wyniku:</value>
+  </data>
+  <data name="fillingSurveyPage_isCorrectDialogMessage" xml:space="preserve">
+    <value>Nie wszystkie odpowiedzi są poprawne, zostaną zapisane tylko poprawne odpowiedzi.</value>
+  </data>
+  <data name="fillingSurveyPage_successSaveDialog" xml:space="preserve">
+    <value>Wynik został poprawnie zapisany.</value>
+  </data>
+  <data name="fillingSurveyPage_saveDialogError" xml:space="preserve">
+    <value>Tytuł wyniku nie może być pusty, spróbuj ponownie.</value>
+  </data>
+  <data name="fillingSurveyPage_savingMessage" xml:space="preserve">
+    <value>Zapisywanie wyniku...</value>
+  </data>
+  <data name="fillingSurveyPage_saveQuestion" xml:space="preserve">
+    <value>Zapisać wprowadzone zamiany?</value>
+  </data>
+  <data name="surveyPage_deleteResultError" xml:space="preserve">
+    <value>Nie można usunąć tego wyniku!</value>
+  </data>
+  <data name="surveyPage_deleteResultQuestionMessage" xml:space="preserve">
+    <value>Czy na pewno chcesz usunać ten wynik?</value>
+  </data>
+  <data name="surveyPage_deleteResultQuestionTitle" xml:space="preserve">
+    <value>Usuń wynik</value>
+  </data>
+  <data name="settings_AutoCheckNewSurvey" xml:space="preserve">
+    <value>Sprawdzaniu nowych ankiet przy starcie</value>
+  </data>
+  <data name="checkForNewSurveyList_WantDownload" xml:space="preserve">
+    <value>Pokazać listę nowych ankiet?</value>
+  </data>
+  <data name="listOfSurveysPageAppBar_AllSurveys" xml:space="preserve">
+    <value>Wszystkie</value>
+  </data>
+  <data name="listOfSurveysPageAppBar_FavoriteSurveys" xml:space="preserve">
+    <value>Ulubione</value>
+  </data>
+  <data name="surveyPageAppBar_AddToFavorite" xml:space="preserve">
+    <value>Dodaj do ulubionych</value>
+  </data>
+  <data name="surveyPageAppBar_RemoveFromFavorite" xml:space="preserve">
+    <value>Usuń z ulubionych</value>
+  </data>
+  <data name="imageQuestionControl_DeleteImagesButton" xml:space="preserve">
+    <value>usuń</value>
+  </data>
+  <data name="messageBox_Download" xml:space="preserve">
+    <value>Pobierz</value>
+  </data>
+  <data name="messageBox_Show" xml:space="preserve">
+    <value>Pokaż</value>
+  </data>
+  <data name="fillingSurveyPage_opaningMessage" xml:space="preserve">
+    <value>Otwieranie wyniku...</value>
+  </data>
+  <data name="testConnection_ServerOk" xml:space="preserve">
+    <value>Server działa poprawnie.</value>
+  </data>
+  <data name="resultsFilterPage_FilterByDate" xml:space="preserve">
+    <value>filtruj po dacie</value>
+  </data>
+  <data name="resultsFilterPage_FilterByLocation" xml:space="preserve">
+    <value>filtruj po lokalizacji</value>
+  </data>
+  <data name="resultsFilterPage_FilterBySurvey" xml:space="preserve">
+    <value>filtruj po ankietach</value>
+  </data>
+  <data name="resultsFilterPage_Latitude" xml:space="preserve">
+    <value>Szerokość:</value>
+  </data>
+  <data name="resultsFilterPage_Longitude" xml:space="preserve">
+    <value>Długość:</value>
+  </data>
+  <data name="resultsFilterPage_NoResultsMatch" xml:space="preserve">
+    <value>Nie znaleziono ankiet odpowiadających zapytaniu.</value>
+  </data>
+  <data name="resultsFilterPage_PageTitle" xml:space="preserve">
+    <value>przeglądaj wyniki</value>
+  </data>
+  <data name="resultsFilterPage_Radius" xml:space="preserve">
+    <value>Promień:</value>
+  </data>
+  <data name="resultsFilterPage_SearchIn" xml:space="preserve">
+    <value>Szukaj w:</value>
+  </data>
+  <data name="resultsFilterPage_SelectCreated" xml:space="preserve">
+    <value>Wybierz ankiety utworzone</value>
+  </data>
+  <data name="resultsFilter_DateTypeAfter" xml:space="preserve">
+    <value>po</value>
+  </data>
+  <data name="resultsFilter_DateTypeAt" xml:space="preserve">
+    <value>w dniu</value>
+  </data>
+  <data name="resultsFilter_DateTypeBefore" xml:space="preserve">
+    <value>przed</value>
+  </data>
+  <data name="resultsFilter_DateTypeBetween" xml:space="preserve">
+    <value>pomiędzy</value>
+  </data>
+  <data name="resultsFilterPage_RemoveSelectedButton" xml:space="preserve">
+    <value>usuń zaznaczoną</value>
+  </data>
+  <data name="listOfSurveysPageAppBar_Filter" xml:space="preserve">
+    <value>Filtr</value>
+  </data>
+  <data name="resultsFilterPageAppBar_Apply" xml:space="preserve">
+    <value>Zatwierdź</value>
+  </data>
+  <data name="resultsFilterPageAppBar_Edit" xml:space="preserve">
+    <value>Edytuj</value>
+  </data>
+  <data name="resultsFilterPage_And" xml:space="preserve">
+    <value>oraz</value>
+  </data>
+  <data name="resultsFilter_AllSurveys" xml:space="preserve">
+    <value>Wszystkie</value>
+  </data>
+  <data name="surveyViewModel_sendingCompleted" xml:space="preserve">
+    <value>Wysyłanie zakończone.</value>
+  </data>
+  <data name="surveyViewModel_serverError" xml:space="preserve">
+    <value>Nie można wysłac wyniku, prawdopodobnie wynik jest zbyt duży. Skontaktuj się z administratorem serwera, aby rozwiązać ten problem lub zmień ustawienia aplikacji aby wynik był mniejszy. </value>
+  </data>
+  <data name="surveyViewModel_unknownError" xml:space="preserve">
+    <value>Nie można wysłac wyniku, sprawdz połączenie z internetem i spróbuj ponownie. </value>
+  </data>
+  <data name="resultsFilter_Searching" xml:space="preserve">
+    <value>Przeszukiwanie wyników...</value>
+  </data>
+  <data name="fillingSurveyPage_FailedGPSSave" xml:space="preserve">
+    <value>Nie udało się określić pozycji GPS. Ankieta została zapisana bez aktualnej lokalizacji.</value>
+  </data>
+  <data name="surveyViewModel_sendingProgressTitle" xml:space="preserve">
+    <value>Wysyłanie rezultatu, prosze czekać...</value>
+  </data>
+  <data name="settings_Default" xml:space="preserve">
+    <value>Motyw telefonu</value>
+  </data>
+  <data name="settings_Theme" xml:space="preserve">
+    <value>Motyw</value>
+  </data>
+  <data name="settings_HighContrast" xml:space="preserve">
+    <value>Wysoki kontrast</value>
+  </data>
+  <data name="settings_NDG" xml:space="preserve">
+    <value>Domyślny</value>
+  </data>
+  <data name="settings_OtherTheme" xml:space="preserve">
+    <value>Zielony</value>
+  </data>
+  <data name="settings_deleteSettings" xml:space="preserve">
+    <value>Usuń ustawienia</value>
+  </data>
+  <data name="settings_deleteSettingsDialogMessage" xml:space="preserve">
+    <value>Usunięcie ustawień usunie wszystkie zapisane ustawienia łącznie z adresem serwera i otworzy formularz rejestracji !</value>
+  </data>
+  <data name="conditionCategoryControl_RemoveMessageBoxMessage" xml:space="preserve">
+    <value>Jest stworzonych więcej kopii kategorii niż wybrana liczba. Chcesz usunąć nadmiarowe kategorie?</value>
+  </data>
+  <data name="conditionCategoryControl_RemoveMessageBoxTitle" xml:space="preserve">
+    <value>Usuń kategorię</value>
+  </data>
+  <data name="enableEncryptionPage_closeQuestion" xml:space="preserve">
+    <value>Chcesz zamknąć aplikacje? </value>
+  </data>
+  <data name="enableEncryptionPage_emptyError" xml:space="preserve">
+    <value>Hasło nie może być puste.</value>
+  </data>
+  <data name="enableEncryptionPage_offAnswer" xml:space="preserve">
+    <value>wyłączone</value>
+  </data>
+  <data name="enableEncryptionPage_onAnswer" xml:space="preserve">
+    <value>włączone</value>
+  </data>
+  <data name="enableEncryptionPage_passwordHeader" xml:space="preserve">
+    <value>Hasło do szyfrowania:</value>
+  </data>
+  <data name="enableEncryptionPage_question" xml:space="preserve">
+    <value>Chce żeby szyfrowanie było:</value>
+  </data>
+  <data name="enableEncryptionPage_title" xml:space="preserve">
+    <value>szyfrowanie</value>
+  </data>
+  <data name="encryptionPasswordPage_error" xml:space="preserve">
+    <value>Hasło jest niepoprawne, spróbuj ponownie. </value>
+  </data>
+  <data name="encryptionPasswordPage_question" xml:space="preserve">
+    <value>Wprowadź hasło do szyfrowania:</value>
+  </data>
+  <data name="encryptionPasswordPage_title" xml:space="preserve">
+    <value>szyfrowanie</value>
+  </data>
+  <data name="resultsFilterPageAppBar_Me" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="resultsFilter_LocationDisable" xml:space="preserve">
+    <value>Usługa lokalizacji musi być włączona w telefonie.</value>
+  </data>
+  <data name="resultsFilterPage_GoToSurveyPage" xml:space="preserve">
+    <value>Idź do strony z ankietą</value>
+  </data>
+  <data name="resultsFilterPage_ShowOnMap" xml:space="preserve">
+    <value>Pokaż na mapie</value>
+  </data>
+  <data name="resultsFilter_NoneSavedGPSPosition" xml:space="preserve">
+    <value>Brak zapisanych pozycji GPS</value>
+  </data>
+  <data name="surveyPage_contextMenuBackToEdit" xml:space="preserve">
+    <value>cofnij do edycji</value>
+  </data>
+  <data name="filterListPage_ShowAllOnMap" xml:space="preserve">
+    <value>Pokaż wszystkie</value>
+  </data>
+  <data name="settings_settingsDeleted" xml:space="preserve">
+    <value>Ustawienia aplikacji zostały wykasowane.</value>
+  </data>
+</root>

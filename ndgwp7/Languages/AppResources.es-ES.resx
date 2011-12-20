@@ -1,0 +1,630 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="applicationTitle" xml:space="preserve">
+    <value>Nokia Data Gathering</value>
+  </data>
+  <data name="checkForNewSurveyList_DownloadFailed" xml:space="preserve">
+    <value>ES_Unable to download list, check server URL address.</value>
+  </data>
+  <data name="checkForNewSurveyList_Downloading" xml:space="preserve">
+    <value>ES_Downloading list of surveys...</value>
+  </data>
+  <data name="checkForNewSurveyList_ManyNewSurveys" xml:space="preserve">
+    <value>ES_There are {0} new surveys.</value>
+  </data>
+  <data name="checkForNewSurveyList_OneNewSurvey" xml:space="preserve">
+    <value>ES_There is one new survey.</value>
+  </data>
+  <data name="checkForNewSurveyList_ServerError" xml:space="preserve">
+    <value>ES_Unknown error.</value>
+  </data>
+  <data name="checkForNewSurveyList_ServerIncompleteResponse" xml:space="preserve">
+    <value>ES_Can't download list, server sent incomplete response.</value>
+  </data>
+  <data name="checkForNewSurveyList_ServerNotFound" xml:space="preserve">
+    <value>ES_Server not found, check your internet connection and server URL address and then try again.</value>
+  </data>
+  <data name="checkForNewSurveyList_ZeroNewSurvey" xml:space="preserve">
+    <value>ES_Not found any new surveys.</value>
+  </data>
+  <data name="conditionCategoryControl_MessageBoxMessage" xml:space="preserve">
+    <value>ES_Do you want to add additional copies of category?</value>
+  </data>
+  <data name="conditionCategoryControl_MessageBoxTitle" xml:space="preserve">
+    <value>ES_Add categories</value>
+  </data>
+  <data name="downloadNewSurveys_CantConfirm" xml:space="preserve">
+    <value>ES_Can't confirm download.</value>
+  </data>
+  <data name="downloadNewSurveys_CantDownloading" xml:space="preserve">
+    <value>ES_Can't download surveys.</value>
+  </data>
+  <data name="downloadNewSurveys_Downloading" xml:space="preserve">
+    <value>ES_Downloading new surveys...</value>
+  </data>
+  <data name="downloadNewSurveys_DownloadingCompleted" xml:space="preserve">
+    <value>ES_Downloading completed.</value>
+  </data>
+  <data name="downloadNewSurveys_MoreSurveys" xml:space="preserve">
+    <value>ES_There were more surveys. Please refresh your list and try again.</value>
+  </data>
+  <data name="downloadNewSurveys_SavingProblem" xml:space="preserve">
+    <value>ES_There is a problem with saving new surveys, probably you don't have enough space to save surveys.</value>
+  </data>
+  <data name="downloadNewSurveys_WrongResponse" xml:space="preserve">
+    <value>ES_Can't download surveys, server sent wrong response.</value>
+  </data>
+  <data name="fillingSurveyPage_Condition" xml:space="preserve">
+    <value>ES_Condition</value>
+  </data>
+  <data name="imageQuestionControl_BrowseImagesButton" xml:space="preserve">
+    <value>ES_browse images</value>
+  </data>
+  <data name="imageQuestionControl_MaxImageCapacity" xml:space="preserve">
+    <value>ES_You have reached max image capacity in this question.</value>
+  </data>
+  <data name="imageQuestionControl_TakePhotoButton" xml:space="preserve">
+    <value>ES_take photo</value>
+  </data>
+  <data name="imageQuestion_ImageIsNull" xml:space="preserve">
+    <value>ES_Image does not exist.</value>
+  </data>
+  <data name="imageQuestion_Images" xml:space="preserve">
+    <value>ES_Images: {0}/{1}</value>
+  </data>
+  <data name="indicatorStyle_BusyText" xml:space="preserve">
+    <value>ES_Connecting...</value>
+  </data>
+  <data name="listOfNewSurveysPageAppBarr_Download" xml:space="preserve">
+    <value>ES_Download all</value>
+  </data>
+  <data name="listOfNewSurveysPageAppBarr_Refresh" xml:space="preserve">
+    <value>ES_Refresh list</value>
+  </data>
+  <data name="listOfNewSurveysPage_DownloadAll" xml:space="preserve">
+    <value>ES_Download all</value>
+  </data>
+  <data name="listOfNewSurveysPage_DownloadingProgress" xml:space="preserve">
+    <value>ES_Connecting...</value>
+  </data>
+  <data name="listOfNewSurveysPage_NothingDownload" xml:space="preserve">
+    <value>ES_There is nothing to download.</value>
+  </data>
+  <data name="listOfNewSurveysPage_PageTitle" xml:space="preserve">
+    <value>ES_new surveys</value>
+  </data>
+  <data name="listOfNewSurveysPage_RefreshList" xml:space="preserve">
+    <value>ES_Refresh list</value>
+  </data>
+  <data name="listOfNewSurveysPage_TooLateInterrupt" xml:space="preserve">
+    <value>ES_It is too late to interrupt downloading.</value>
+  </data>
+  <data name="listOfSurveysPageAppBar_CheckNewSurveys" xml:space="preserve">
+    <value>ES_Check for new Surveys</value>
+  </data>
+  <data name="listOfSurveysPageAppBar_CheckUpdate" xml:space="preserve">
+    <value>ES_Check for update</value>
+  </data>
+  <data name="listOfSurveysPageAppBar_Settings" xml:space="preserve">
+    <value>ES_Settings</value>
+  </data>
+  <data name="listOfSurveysPageAppBar_TestConnection" xml:space="preserve">
+    <value>ES_Test connection</value>
+  </data>
+  <data name="listOfSurveysPage_PageTitle" xml:space="preserve">
+    <value>ES_list of surveys</value>
+  </data>
+  <data name="messageBox_Cancel" xml:space="preserve">
+    <value>ES_Cancel</value>
+  </data>
+  <data name="messageBox_No" xml:space="preserve">
+    <value>ES_No</value>
+  </data>
+  <data name="messageBox_OK" xml:space="preserve">
+    <value>ES_OK</value>
+  </data>
+  <data name="messageBox_Yes" xml:space="preserve">
+    <value>ES_Yes</value>
+  </data>
+  <data name="operationsOnRegistration_CheckConnection" xml:space="preserve">
+    <value>ES_Check your internet connection.</value>
+  </data>
+  <data name="operationsOnRegistration_CheckConnectionServerAddress" xml:space="preserve">
+    <value>ES_Check your internet connection or server address.</value>
+  </data>
+  <data name="operationsOnRegistration_ConnectionProblem" xml:space="preserve">
+    <value>ES_Connection Problem</value>
+  </data>
+  <data name="operationsOnRegistration_ContainMaximum" xml:space="preserve">
+    <value>ES_*Can contain maximum {0} characters.</value>
+  </data>
+  <data name="operationsOnRegistration_ContainMinimum" xml:space="preserve">
+    <value>ES_*Must contain minimum {0} characters.</value>
+  </data>
+  <data name="operationsOnRegistration_PhoneNotValidIMEIExist" xml:space="preserve">
+    <value>ES_Your phone number is not valid or IMEI already exists.</value>
+  </data>
+  <data name="operationsOnRegistration_ProcessingBarInformation" xml:space="preserve">
+    <value>ES_Connecting...</value>
+  </data>
+  <data name="operationsOnRegistration_RegistratedSuccessfully" xml:space="preserve">
+    <value>ES_Your IMEI was registered successfully.</value>
+  </data>
+  <data name="operationsOnRegistration_RegistrationFailed" xml:space="preserve">
+    <value>ES_Registration Failed</value>
+  </data>
+  <data name="operationsOnRegistration_RegistrationSuccess" xml:space="preserve">
+    <value>ES_Registration Success</value>
+  </data>
+  <data name="operationsOnRegistration_ServerNotResponding" xml:space="preserve">
+    <value>ES_Server is not responding, check your internet connection.</value>
+  </data>
+  <data name="operationsOnRegistration_SetServerAddress" xml:space="preserve">
+    <value>ES_*Set server address.</value>
+  </data>
+  <data name="operationsOnRegistration_ValidServerAddress" xml:space="preserve">
+    <value>ES_Make sure your server address is valid.</value>
+  </data>
+  <data name="processingBar_Working" xml:space="preserve">
+    <value>ES_Working...</value>
+  </data>
+  <data name="registrationPage_PageTitle" xml:space="preserve">
+    <value>ES_registration</value>
+  </data>
+  <data name="registrationPage_RegisterButton" xml:space="preserve">
+    <value>ES_Register</value>
+  </data>
+  <data name="registrationPage_RegistrationConfirmation" xml:space="preserve">
+    <value>ES_I agree to share my IMEI and phone number</value>
+  </data>
+  <data name="registrationPage_TitleIMEI" xml:space="preserve">
+    <value>ES_Your IMEI:</value>
+  </data>
+  <data name="registrationPage_TitlePhoneNumber" xml:space="preserve">
+    <value>ES_Your phone number:</value>
+  </data>
+  <data name="registrationPage_TitleServerUrl" xml:space="preserve">
+    <value>ES_Server Address:</value>
+  </data>
+  <data name="settingsPage_PageTitle" xml:space="preserve">
+    <value>ES_settings</value>
+  </data>
+  <data name="settings_DateFormat" xml:space="preserve">
+    <value>ES_Date format</value>
+  </data>
+  <data name="settings_FontSize" xml:space="preserve">
+    <value>ES_Font size</value>
+  </data>
+  <data name="settings_GPS" xml:space="preserve">
+    <value>ES_GPS Configuration</value>
+  </data>
+  <data name="settings_IsolatedStorageFailed" xml:space="preserve">
+    <value>ES_Cannot load settings. Please restart application.</value>
+  </data>
+  <data name="settings_Language" xml:space="preserve">
+    <value>ES_Language</value>
+  </data>
+  <data name="settings_Large" xml:space="preserve">
+    <value>ES_Large</value>
+  </data>
+  <data name="settings_Medium" xml:space="preserve">
+    <value>ES_Medium</value>
+  </data>
+  <data name="settings_PhotoResolution" xml:space="preserve">
+    <value>ES_Pick a photo resolution</value>
+  </data>
+  <data name="settings_SaveFailed" xml:space="preserve">
+    <value>ES_Cannot save new settings.</value>
+  </data>
+  <data name="settings_SaveNothing" xml:space="preserve">
+    <value>ES_Nothing to save.</value>
+  </data>
+  <data name="settings_Small" xml:space="preserve">
+    <value>ES_Small</value>
+  </data>
+  <data name="surveyPageAppBar_Delete" xml:space="preserve">
+    <value>ES_Delete survey</value>
+  </data>
+  <data name="surveyPageAppBar_NewResult" xml:space="preserve">
+    <value>ES_new result</value>
+  </data>
+  <data name="surveyPage_deleteSurveyDialogMessage" xml:space="preserve">
+    <value>ES_Are you sure you want delete survey and all results?</value>
+  </data>
+  <data name="surveyPage_deleteSurveyDialogTitle" xml:space="preserve">
+    <value>ES_Delete survey</value>
+  </data>
+  <data name="surveyPage_deleteSurveyError" xml:space="preserve">
+    <value>ES_Unable to delete this survey!</value>
+  </data>
+  <data name="surveyPage_SurveyID" xml:space="preserve">
+    <value>ES_Survey ID:</value>
+  </data>
+  <data name="testConnectionPage_PageTitle" xml:space="preserve">
+    <value>ES_test connection</value>
+  </data>
+  <data name="updatesPage_PageTitle" xml:space="preserve">
+    <value>ES_updates</value>
+  </data>
+  <data name="settings_Custom" xml:space="preserve">
+    <value>ES_Custom</value>
+  </data>
+  <data name="settings_PhoneLanguage" xml:space="preserve">
+    <value>ES_Phone Language</value>
+  </data>
+  <data name="dateQuestion_MaxDateReached" xml:space="preserve">
+    <value>ES_You must pick date before {0}</value>
+  </data>
+  <data name="dateQuestion_MinDateReached" xml:space="preserve">
+    <value>ES_You must pick date after {0}</value>
+  </data>
+  <data name="fillingSurveyPage_OnSaveResultTitle" xml:space="preserve">
+    <value>ES_save result</value>
+  </data>
+  <data name="surveyPage_contextMenuDeleteItem" xml:space="preserve">
+    <value>ES_delete result</value>
+  </data>
+  <data name="surveyPage_contextMenuEditItem" xml:space="preserve">
+    <value>ES_edit result</value>
+  </data>
+  <data name="surveyPage_contextMenuSendItem" xml:space="preserve">
+    <value>ES_send result</value>
+  </data>
+  <data name="surveyPage_contextMenuShowItem" xml:space="preserve">
+    <value>ES_show result</value>
+  </data>
+  <data name="surveyPage_resultsListtitle" xml:space="preserve">
+    <value>ES_Saved results:</value>
+  </data>
+  <data name="validationRules_LengthEmptyMessage" xml:space="preserve">
+    <value>ES_Field cannot be empty.</value>
+  </data>
+  <data name="validationRules_LengthMaxMessage" xml:space="preserve">
+    <value>ES_Field can contain only {0} characters.</value>
+  </data>
+  <data name="validationRules_LengthMinMessage" xml:space="preserve">
+    <value>ES_Field must contain at least {0} characters.</value>
+  </data>
+  <data name="validationRules_MaxReachedMessage" xml:space="preserve">
+    <value>ES_Max field value is {0}</value>
+  </data>
+  <data name="validationRules_MinReachedMessage" xml:space="preserve">
+    <value>ES_Min field value is {0}</value>
+  </data>
+  <data name="validationRules_RegexValueNotValid" xml:space="preserve">
+    <value>ES_Value is not valid.</value>
+  </data>
+  <data name="settingsPage_InvalidCustomValue" xml:space="preserve">
+    <value>ES_Value is not valid. Please insert number in range {0}-{1}</value>
+  </data>
+  <data name="fillingSurveyPage_saveDialogError" xml:space="preserve">
+    <value>ES_Result title can't be empty, try again.</value>
+  </data>
+  <data name="fillingSurveyPage_savingMessage" xml:space="preserve">
+    <value>ES_Saving result...</value>
+  </data>
+  <data name="fillingSurveyPage_successSaveDialog" xml:space="preserve">
+    <value>ES_Result succesfully saved.</value>
+  </data>
+  <data name="fillingSurveyPage_saveQuestion" xml:space="preserve">
+    <value>ES_Would you like to save last changes?</value>
+  </data>
+  <data name="surveyPage_deleteResultError" xml:space="preserve">
+    <value>ES_Unable to delete this result!</value>
+  </data>
+  <data name="surveyPage_deleteResultQuestionMessage" xml:space="preserve">
+    <value>ES_Are you sure you want to delete this result?</value>
+  </data>
+  <data name="surveyPage_deleteResultQuestionTitle" xml:space="preserve">
+    <value>ES_Delete result</value>
+  </data>
+  <data name="settings_AutoCheckNewSurvey" xml:space="preserve">
+    <value>ES_Checking new surveys at start</value>
+  </data>
+  <data name="checkForNewSurveyList_WantDownload" xml:space="preserve">
+    <value>ES_Show list of new surveys?</value>
+  </data>
+  <data name="listOfSurveysPageAppBar_AllSurveys" xml:space="preserve">
+    <value>ES_All surveys</value>
+  </data>
+  <data name="listOfSurveysPageAppBar_FavoriteSurveys" xml:space="preserve">
+    <value>ES_Favorites</value>
+  </data>
+  <data name="surveyPageAppBar_AddToFavorite" xml:space="preserve">
+    <value>ES_Add to favorite</value>
+  </data>
+  <data name="surveyPageAppBar_RemoveFromFavorite" xml:space="preserve">
+    <value>ES_Remove from favorite</value>
+  </data>
+  <data name="imageQuestionControl_DeleteImagesButton" xml:space="preserve">
+    <value>ES_delete</value>
+  </data>
+  <data name="messageBox_Download" xml:space="preserve">
+    <value>ES_Download</value>
+  </data>
+  <data name="messageBox_Show" xml:space="preserve">
+    <value>ES_Show</value>
+  </data>
+  <data name="fillingSurveyPage_opaningMessage" xml:space="preserve">
+    <value>ES_Opening result...</value>
+  </data>
+  <data name="testConnection_ServerOk" xml:space="preserve">
+    <value>ES_Server is up and running.</value>
+  </data>
+  <data name="resultsFilterPage_FilterByDate" xml:space="preserve">
+    <value>ES_filter by date</value>
+  </data>
+  <data name="resultsFilterPage_FilterByLocation" xml:space="preserve">
+    <value>ES_filter by location</value>
+  </data>
+  <data name="resultsFilterPage_FilterBySurvey" xml:space="preserve">
+    <value>ES_filter by survey</value>
+  </data>
+  <data name="resultsFilterPage_Latitude" xml:space="preserve">
+    <value>ES_Latitude:</value>
+  </data>
+  <data name="resultsFilterPage_Longitude" xml:space="preserve">
+    <value>ES_Longitude:</value>
+  </data>
+  <data name="resultsFilterPage_NoResultsMatch" xml:space="preserve">
+    <value>ES_There are no results matching your query.</value>
+  </data>
+  <data name="resultsFilterPage_PageTitle" xml:space="preserve">
+    <value>ES_browse results</value>
+  </data>
+  <data name="resultsFilterPage_Radius" xml:space="preserve">
+    <value>ES_Radius:</value>
+  </data>
+  <data name="resultsFilterPage_SearchIn" xml:space="preserve">
+    <value>ES_Search in:</value>
+  </data>
+  <data name="resultsFilterPage_SelectCreated" xml:space="preserve">
+    <value>ES_Select surveys created</value>
+  </data>
+  <data name="resultsFilter_DateTypeAfter" xml:space="preserve">
+    <value>ES_after</value>
+  </data>
+  <data name="resultsFilter_DateTypeAt" xml:space="preserve">
+    <value>ES_at</value>
+  </data>
+  <data name="resultsFilter_DateTypeBefore" xml:space="preserve">
+    <value>ES_before</value>
+  </data>
+  <data name="resultsFilter_DateTypeBetween" xml:space="preserve">
+    <value>ES_between</value>
+  </data>
+  <data name="resultsFilterPage_RemoveSelectedButton" xml:space="preserve">
+    <value>ES_remove selected</value>
+  </data>
+  <data name="listOfSurveysPageAppBar_Filter" xml:space="preserve">
+    <value>ES_Filter</value>
+  </data>
+  <data name="resultsFilterPageAppBar_Apply" xml:space="preserve">
+    <value>ES_Apply</value>
+  </data>
+  <data name="resultsFilterPageAppBar_Edit" xml:space="preserve">
+    <value>ES_Edit</value>
+  </data>
+  <data name="resultsFilterPage_And" xml:space="preserve">
+    <value>ES_and</value>
+  </data>
+  <data name="resultsFilter_AllSurveys" xml:space="preserve">
+    <value>ES_All surveys</value>
+  </data>
+  <data name="resultsFilter_Searching" xml:space="preserve">
+    <value>ES_Searching...</value>
+  </data>
+  <data name="fillingSurveyPage_FailedGPSSave" xml:space="preserve">
+    <value>ES_Could not retrieve GPS position. Result was saved without current location.</value>
+  </data>
+  <data name="surveyViewModel_sendingCompleted" xml:space="preserve">
+    <value>ES_Sending completed.</value>
+  </data>
+  <data name="surveyViewModel_serverError" xml:space="preserve">
+    <value>ES_Cannot send this result, result  is wrong or too large.</value>
+  </data>
+  <data name="surveyViewModel_unknownError" xml:space="preserve">
+    <value>ES_Cannot send this result, probably result  is too large. Contact the server administrator to resolve this problem or try send smaller result.</value>
+  </data>
+  <data name="surveyViewModel_sendingProgressTitle" xml:space="preserve">
+    <value>ES_Sending result, please wait..</value>
+  </data>
+  <data name="settings_Default" xml:space="preserve">
+    <value>ES_Phone theme</value>
+  </data>
+  <data name="settings_Theme" xml:space="preserve">
+    <value>ES_Theme</value>
+  </data>
+  <data name="conditionCategoryControl_RemoveMessageBoxMessage" xml:space="preserve">
+    <value>ES_There are more copies of category then currently selected. Do you want to limit copies to selected amount?</value>
+  </data>
+  <data name="conditionCategoryControl_RemoveMessageBoxTitle" xml:space="preserve">
+    <value>ES_Remove categories</value>
+  </data>
+  <data name="settings_HighContrast" xml:space="preserve">
+    <value>ES_High contrast</value>
+  </data>
+  <data name="settings_NDG" xml:space="preserve">
+    <value>ES_Default</value>
+  </data>
+  <data name="settings_OtherTheme" xml:space="preserve">
+    <value>ES_Green</value>
+  </data>
+  <data name="settings_deleteSettings" xml:space="preserve">
+    <value>ES_Delete settings</value>
+  </data>
+  <data name="settings_deleteSettingsDialogMessage" xml:space="preserve">
+    <value>ES_Deleting settings will remove all stored settings including server URI and switch view to registration page !</value>
+  </data>
+  <data name="encryptionPasswordPage_error" xml:space="preserve">
+    <value>ES_Password is incorrect. Try again.</value>
+  </data>
+  <data name="encryptionPasswordPage_question" xml:space="preserve">
+    <value>ES_Enter encryption password:</value>
+  </data>
+  <data name="encryptionPasswordPage_title" xml:space="preserve">
+    <value>ES_encryption</value>
+  </data>
+  <data name="enableEncryptionPage_closeQuestion" xml:space="preserve">
+    <value>ES_Would you like to close application?</value>
+  </data>
+  <data name="enableEncryptionPage_emptyError" xml:space="preserve">
+    <value>ES_Password cannot be empty.</value>
+  </data>
+  <data name="enableEncryptionPage_offAnswer" xml:space="preserve">
+    <value>ES_off</value>
+  </data>
+  <data name="enableEncryptionPage_onAnswer" xml:space="preserve">
+    <value>ES_on</value>
+  </data>
+  <data name="enableEncryptionPage_passwordHeader" xml:space="preserve">
+    <value>ES_Encryption password:</value>
+  </data>
+  <data name="enableEncryptionPage_question" xml:space="preserve">
+    <value>ES_I want encrypt to be:</value>
+  </data>
+  <data name="enableEncryptionPage_title" xml:space="preserve">
+    <value>ES_encryption</value>
+  </data>
+  <data name="resultsFilterPageAppBar_Me" xml:space="preserve">
+    <value>ES_Me</value>
+  </data>
+  <data name="resultsFilter_LocationDisable" xml:space="preserve">
+    <value>ES_Location services must be enabled on your phone.</value>
+  </data>
+  <data name="resultsFilterPage_GoToSurveyPage" xml:space="preserve">
+    <value>ES_Go to survey page</value>
+  </data>
+  <data name="resultsFilterPage_ShowOnMap" xml:space="preserve">
+    <value>ES_Show on map</value>
+  </data>
+  <data name="resultsFilter_NoneSavedGPSPosition" xml:space="preserve">
+    <value>ES_None saved GPS position</value>
+  </data>
+  <data name="surveyPage_contextMenuBackToEdit" xml:space="preserve">
+    <value>back to edit</value>
+  </data>
+  <data name="filterListPage_ShowAllOnMap" xml:space="preserve">
+    <value>ES_Show all</value>
+  </data>
+  <data name="settings_settingsDeleted" xml:space="preserve">
+    <value>ES_All settings have been deleted.</value>
+  </data>
+</root>

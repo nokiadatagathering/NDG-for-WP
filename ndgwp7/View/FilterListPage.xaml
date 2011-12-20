@@ -1,0 +1,170 @@
+﻿<!-- 
+    Copyright (C) 2011  Comarch
+  
+    NDG for WP7 is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License as published by the Free Software Foundation; either 
+    version 2.1 of the License, or (at your option) any later version.
+  
+    NDG is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
+  
+    You should have received a copy of the GNU Lesser General Public
+    License along with NDG.  If not, see <http://www.gnu.org/licenses/
+-->
+<phone:PhoneApplicationPage 
+    x:Class="com.comarch.mobile.ndg.View.FilterListPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:processing="clr-namespace:com.comarch.mobile.ndg.BusyIndicator"
+    xmlns:konwertery="clr-namespace:com.comarch.mobile.ndg.ViewModel"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <phone:PhoneApplicationPage.Resources>
+        <konwertery:ResultStatusConverter x:Key="ResultStatusConverter" />
+        <konwertery:ResultStatusToVisibilityConverter x:Key="ResultStatusToVisibilityConverter" />
+    </phone:PhoneApplicationPage.Resources>
+    
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <processing:BusyIndicatorControl x:Name="BusyIndicator" Style="{StaticResource BusyIndicatorStyle}"
+                                   BusyText="{Binding Path=Information, Mode=TwoWay}"
+			                       IsBusy="{Binding Path=IsEnabled, Mode=TwoWay}" DataContext="{Binding}">
+
+        <Grid x:Name="LayoutRoot" Background="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+                <TextBlock x:Name="ApplicationTitle" Text="{Binding LocalizedResources.applicationTitle, Source={StaticResource LanguageStrings}}" Style="{StaticResource PhoneTextNormalStyle}"/>
+                <TextBlock x:Name="PageTitle" Text="{Binding LocalizedResources.resultsFilterPage_PageTitle, Source={StaticResource LanguageStrings}}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            </StackPanel>
+
+            <Grid x:Name="ListView" Grid.Row="1" Margin="12,0,12,0">
+                <TextBlock x:Name="Status" Text="{Binding LocalizedResources.resultsFilterPage_NoResultsMatch, Source={StaticResource LanguageStrings}}" Style="{StaticResource PhoneTextAccentStyle}" FontSize="{Binding Values.FontSize, Source={StaticResource SettingValues}}" TextWrapping="Wrap" />
+
+                <ListBox x:Name="ListOfSurveys" ItemsSource="{Binding}" >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <toolkit:ContextMenuService.ContextMenu>
+                                    <toolkit:ContextMenu>
+                                        <toolkit:MenuItem Header="{Binding LocalizedResources.resultsFilterPage_ShowOnMap, Source={StaticResource LanguageStrings}}" FontSize="{Binding Values.FontSize, Source={StaticResource SettingValues}}" Click="OnShowOnMap" />
+                                        <toolkit:MenuItem Header="{Binding LocalizedResources.resultsFilterPage_GoToSurveyPage, Source={StaticResource LanguageStrings}}" FontSize="{Binding Values.FontSize, Source={StaticResource SettingValues}}" Click="OnGoToSurveyPage" />
+                                    </toolkit:ContextMenu>
+                                </toolkit:ContextMenuService.ContextMenu>
+                                <TextBlock Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{Binding Values.ListFontSize, Source={StaticResource SettingValues}}" />
+                                <ListBox x:Name="ListOfResults" ItemsSource="{Binding}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Margin="0,0,0,17" Width="432">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="30" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <toolkit:ContextMenuService.ContextMenu>
+                                                        <toolkit:ContextMenu Opened="ContextMenu_Opened" Closed="ContextMenu_Closed" IsZoomEnabled="False">
+                                                            <toolkit:MenuItem Header="{Binding LocalizedResources.surveyPage_contextMenuBackToEdit, Source={StaticResource LanguageStrings}}" FontSize="{Binding Values.FontSize, Source={StaticResource SettingValues}}" 
+                                                                              Visibility="{Binding Status, Converter={StaticResource ResultStatusToVisibilityConverter}, ConverterParameter=Invert}" Click="OnBackToEditClick" />
+                                                            <toolkit:MenuItem Header="{Binding LocalizedResources.surveyPage_contextMenuSendItem, Source={StaticResource LanguageStrings}}" FontSize="{Binding Values.FontSize, Source={StaticResource SettingValues}}" 
+                                                                              Visibility="{Binding Status, Converter={StaticResource ResultStatusToVisibilityConverter}, ConverterParameter=null}" IsEnabled="{Binding Status, Converter={StaticResource ResultStatusConverter}, ConverterParameter=ToSend}" Click="OnSendResult"/>
+                                                            <toolkit:MenuItem Header="{Binding LocalizedResources.surveyPage_contextMenuEditItem, Source={StaticResource LanguageStrings}}" FontSize="{Binding Values.FontSize, Source={StaticResource SettingValues}}" 
+                                                                              Visibility="{Binding Status, Converter={StaticResource ResultStatusToVisibilityConverter}, ConverterParameter=null}" IsEnabled="{Binding Status, Converter={StaticResource ResultStatusConverter}, ConverterParameter=ToEdit}" Click="OnEditExistingResult"/>
+                                                            <toolkit:MenuItem Header="{Binding LocalizedResources.surveyPage_contextMenuShowItem, Source={StaticResource LanguageStrings}}" FontSize="{Binding Values.FontSize, Source={StaticResource SettingValues}}" Click="OnShowResult"/>
+                                                            <toolkit:MenuItem  Header="{Binding LocalizedResources.surveyPage_contextMenuDeleteItem, Source={StaticResource LanguageStrings}}" FontSize="{Binding Values.FontSize, Source={StaticResource SettingValues}}" Click="OnDeleteResult"/>
+                                                        </toolkit:ContextMenu>
+                                                    </toolkit:ContextMenuService.ContextMenu>
+                                                    <TextBlock Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{Binding Values.FontSize, Source={StaticResource SettingValues}}" Margin="30,0,12,0" />
+                                                    <Rectangle Fill="{StaticResource PhoneAccentBrush}"  Grid.Column="1" OpacityMask="{Binding Status, Converter={StaticResource ResultStatusConverter}, ConverterParameter=ToImage}" MaxHeight="30" MaxWidth="30">
+                                                    </Rectangle>
+                                                </Grid>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <!--<toolkit:LongListSelector x:Name="ListOfSurveys" BufferSize="2.0" ItemsSource="{Binding}">
+                    <toolkit:LongListSelector.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{Binding Values.ListFontSize, Source={StaticResource SettingValues}}" />
+                        </DataTemplate>
+                    </toolkit:LongListSelector.GroupHeaderTemplate>
+                    <toolkit:LongListSelector.GroupItemTemplate>
+                        <DataTemplate>
+                            <Border BorderThickness="3" Background="{StaticResource PhoneChromeBrush}">
+                                <TextBlock Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" 
+                                           FontSize="{Binding Values.ListFontSize, Source={StaticResource SettingValues}}" />
+                            </Border>
+                        </DataTemplate>
+                    </toolkit:LongListSelector.GroupItemTemplate>
+                    <toolkit:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0,0,0,17" Width="432">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="30" />
+                                    </Grid.ColumnDefinitions>
+                                    <toolkit:ContextMenuService.ContextMenu>
+                                        <toolkit:ContextMenu Opened="ContextMenu_Opened" Closed="ContextMenu_Closed">
+                                            <toolkit:MenuItem Header="{Binding LocalizedResources.surveyPage_contextMenuSendItem, Source={StaticResource LanguageStrings}}" FontSize="{Binding Values.FontSize, Source={StaticResource SettingValues}}" IsEnabled="{Binding Status, Converter={StaticResource ResultStatusConverter}, ConverterParameter=ToSend}" Click="OnSendResult"/>
+                                            <toolkit:MenuItem Header="{Binding LocalizedResources.surveyPage_contextMenuEditItem, Source={StaticResource LanguageStrings}}" FontSize="{Binding Values.FontSize, Source={StaticResource SettingValues}}" IsEnabled="{Binding Status, Converter={StaticResource ResultStatusConverter}, ConverterParameter=ToEdit}" Click="OnEditExistingResult"/>
+                                            <toolkit:MenuItem Header="{Binding LocalizedResources.surveyPage_contextMenuShowItem, Source={StaticResource LanguageStrings}}" FontSize="{Binding Values.FontSize, Source={StaticResource SettingValues}}" Click="OnShowResult"/>
+                                            <toolkit:MenuItem  Header="{Binding LocalizedResources.surveyPage_contextMenuDeleteItem, Source={StaticResource LanguageStrings}}" FontSize="{Binding Values.FontSize, Source={StaticResource SettingValues}}" Click="OnDeleteResult"/>
+                                        </toolkit:ContextMenu>
+                                    </toolkit:ContextMenuService.ContextMenu>
+                                    <TextBlock Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{Binding Values.ListFontSize, Source={StaticResource SettingValues}}"/>
+                                    <Rectangle Fill="{StaticResource PhoneAccentBrush}" Height="25" Width="26" Grid.Column="1" OpacityMask="{Binding Status, Converter={StaticResource ResultStatusConverter}, ConverterParameter=ToImage}">
+                                    </Rectangle>
+                                </Grid>
+                            </StackPanel>
+                        </DataTemplate>
+                    </toolkit:LongListSelector.ItemTemplate>
+                </toolkit:LongListSelector>-->
+            </Grid>
+        </Grid>
+    </processing:BusyIndicatorControl>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar />
+        <!--<shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Delete" Click="OnShowAllOnMap" />-->
+        <!--</shell:ApplicationBar>-->
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>
