@@ -1,3 +1,5 @@
+THIS IS A DEMO PROJECT MADE WHEN LEARNING WP7. FOR THE PRODUCTION VERSION LOOK AT THE WP&-OFFICIAL REPO
+
 This is the NDG mobile client for Windows Phone 7
 
 NDG mobile client has three .dll files added into the lib directory. We have specified the location, the .dll name, give a short description and the software license:
